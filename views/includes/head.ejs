@@ -1,0 +1,407 @@
+<head>
+    <title>Solent Technology | <%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 17px;
+        }
+
+        #fontheading {
+            font-family: 'Bebas Neue', cursive;
+            background-color: seagreen;
+        }
+
+        .fontpara {
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .ulhead {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .lihead {
+            font-size: 25px;
+            margin-left: 50px;
+            float: left;
+        }
+
+        a {
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .btnregister input[type="submit"] {
+            font-size: 25px;
+            margin-top: 30px;
+            border: none;
+            outline: none;
+            height: 50px;
+            width: 30%;
+            color: white;
+            background: seagreen;
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        .btnregister input[type="button"] {
+            font-size: 15px;
+            border: none;
+            outline: none;
+            height: 30px;
+            width: 30%;
+            color: white;
+            background: red;
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        #floatright {
+            float: right;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+            /*border: 1px solid red;*/
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        #container {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        #container .content {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .formbox {
+            height: 535px;
+            background: white;
+            /* border: 2px solid black; */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .5);
+        }
+
+        .formbox .left {
+            float: left;
+            width: 50%;
+            height: 500px;
+            background: url(img/veg16.jpg);
+            background-size: cover;
+        }
+
+        .formbox .right {
+            float: right;
+            width: 50%;
+            height: 600px;
+        }
+
+        .formstyle {
+            width: 100%;
+            padding: 0px 40px;
+            box-sizing: border-box;
+            height: 600px;
+        }
+
+        .formstyle p {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .formstyle input[type="text"],
+        .formstyle input[type="email"],
+        .formstyle input[type="password"] {
+            font-size: 18px;
+            font-family: 'Didact Gothic', sans-serif;
+            width: 100%;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+        }
+
+        .formstyle input[type="submit"] {
+            font-size: 25px;
+            font-family: 'Bebas Neue', cursive;
+            margin-top: 30px;
+            width: 100%;
+            border: none;
+            outline: none;
+            height: 50px;
+            color: white;
+            background: seagreen;
+            border-radius: 50px;
+        }
+
+        .formstyle input[type="submit"]:hover {
+            background: darkgreen;
+        }
+
+        .registrationheading {
+            text-align: center;
+            margin-top: -30px;
+            margin-bottom: -30px;
+        }
+
+        .loginbody {
+            margin: 0;
+            padding: 0;
+            background: url(img/veg7.jpg);
+            background-size: cover;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            color: seagreen;
+        }
+
+        .loginbox {
+            width: 420px;
+            height: 520px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.0001);
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            font-size: 30px;
+        }
+
+        .loginbox p {
+            margin-left: 65px;
+            text-align: left;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Didact Gothic', sans-serif;
+        }
+
+        .loginbox span {
+            text-align: center;
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .loginbox input[type="text"],
+        .loginbox input[type="password"] {
+            margin-left: 40px;
+            margin-right: 40px;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            font-weight: bold;
+            width: 70%;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 2px solid seagreen;
+        }
+
+        .loginbox input[type="submit"] {
+            font-size: 35px;
+            font-family: 'Bebas Neue', cursive;
+            margin-top: 50px;
+            width: 70%;
+            border: none;
+            outline: none;
+            height: 50px;
+            color: white;
+            background: seagreen;
+            border-radius: 50px;
+        }
+
+        .imageexpert img {
+            height: 150px;
+            border-radius: 100%;
+        }
+
+        .imageexpert p {
+            margin: 5px;
+            font-weight: bold;
+        }
+
+
+        .veg img {
+            height: 250px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+
+        .veg p {
+            margin-top: 5px;
+            font-size: 20px;
+        }
+
+        .veg span {
+            font-size: 15px;
+            color: #878787;
+        }
+
+        .rupees span {
+            font-family: 'Staatliches', cursive;
+            font-size: 20px;
+            color: #62ab00;
+        }
+
+        .borderleft {
+            border-left: 1px solid #878787;
+        }
+
+        #rsstrike {
+            color: #878787;
+        }
+
+        #msglog1 {
+            color: red;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            margin-left: 65px;
+            font-weight: bold;
+        }
+
+        #msglog2 {
+            color: red;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            margin-left: 65px;
+            font-weight: bold;
+        }
+
+        #msg1 {
+            color: red;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        #msg2 {
+            color: red;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        #msg3 {
+            color: red;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        #msg4 {
+            color: red;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        #msg5 {
+            color: red;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        #msg6 {
+            color: red;
+            font-size: 15px;
+            font-family: 'Didact Gothic', sans-serif;
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row" id="fontheading">
+        <div class="col-2">
+            &nbsp;
+        </div>
+        <div class="col-2">
+            <span style="font-size: 70px; color:white">Solent</span>
+        </div>
+        <div class="col-6" style="margin-top: 30px;">
+            <ul class="ulhead" id="floatright">
+                <li class="lihead"><a href="/">Home</a></li>
+                <li class="lihead"><a href="/speakers">Speakers</a></li>
+            </ul>
+        </div>
+        <div class="col-2">
+            &nbsp;
+        </div>
+    </div>

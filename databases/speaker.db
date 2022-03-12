@@ -1,0 +1,7 @@
+CREATE TABLE [speaker] (
+    [id] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+    [name] TEXT, 
+    [title] TEXT, 
+    [about] TEXT, 
+    [workplace] TEXT
+    );

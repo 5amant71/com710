@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('includes/head.ejs') %>
+
+<div class="row">
+    <div class="col-2">
+        &nbsp;
+    </div>
+    <div class="col-8 headingbook">
+        <center>
+            <h1 style="margin-top: 30px;">SPEAKERS</h1>
+        </center>
+    </div>
+    <div class="col-2">
+        &nbsp;
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        &nbsp;
+    </div>
+    <div class="col-8 btnregister">
+        <div class="row veg">
+            <% speakers.forEach(speaker => { %>
+            <div class="col-4">
+                <center>
+                    <a href="/speaker/<%= speaker.id %>">
+                        <span> <%= speaker.workplace %> </span>
+                        <p> <%= speaker.name %> </p>
+                    </a>
+                    <a href="/speaker/delete/<%= speaker.id %>"><input type="button" name="btnsubmit"
+                            value="DELETE"></a>
+                </center>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+    <div class="col-2">
+        &nbsp;
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        &nbsp;
+    </div>
+    <div class="col-8 headingbook">
+        <center>
+            <h1 style="margin-top: 30px;">REGISTRATION</h1>
+        </center>
+    </div>
+    <div class="col-2">
+        &nbsp;
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        &nbsp;
+    </div>
+    <div class="col-8 formbox fontpara" style="background-color: white;">
+        <form action="/speakers" method="post">
+            <div class="formstyle">
+                <p>NAME</p>
+                <input type="text" name="name" required>
+
+                <p>TITLE</p>
+                <input type="text" name="title" required>
+
+                <p>ABOUT</p>
+                <input type="text" name="about" required>
+
+                <p>WORKPLACE</p>
+                <input type="text" name="workplace" required>
+
+                <input type="submit" id="btnsubmit">
+            </div>
+        </form>
+    </div>
+    <div class="col-2">
+        &nbsp;
+    </div>
+</div>
+</body>
+
+</html>
